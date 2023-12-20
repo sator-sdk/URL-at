@@ -50,15 +50,17 @@ Help menu
 ### Set the `/` separator to the unicode `2215`
 
 ```shell
-# unicode 2215 in the User-Info path that will be displayed in URL-Encoded
+# unicode 2215
 python urlat.py -i 192.168.1.119 -s 'totally.legit.domain.tld/api/v1/signin/ident?klmer=G1927123976%3A893513460&redir=https%3A%2F%2Fanother.domain&Loing&dobui=b253cnZqbmRzd3JvdmJ3cm92amJvd3dka2piZHZvZWlqY2V3b2lubm9rbmN3d29u' -f
 ```
 <p align="center">
 <img src="/pics/unicode2155.png">
 </p>
 <p align="center">
-unicode 2215 in the User-Info path that will be displayed in URL-Encoded
+unicode 2215 by default encoded if not passed through the -sp tag
 </p>
+
+#### `-sp` tag
 
 ```shell
 # Unencoded unicode 2215 in the encodable variable
@@ -70,7 +72,7 @@ python urlat.py -i 192.168.1.119 -s totally.legit.domain.tld -sp '/api/v1/signin
 <img src="/pics/userpathunicode.png">
 </p>
 <p align="center">
-unicode 2215 in the User-Info path that will be displayed in URL-Encoded
+unicode 2215 here shown not encoded
 </p>
 
 ### Add the final redirection path
