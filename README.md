@@ -57,7 +57,7 @@ python urlat.py -i 192.168.1.119 -s 'totally.legit.domain.tld/api/v1/signin/iden
 <img src="/pics/unicode2155.png">
 </p>
 <p align="center">
-unicode 2215 by default encoded if not passed through the -sp tag
+unicode 2215 by default url-encoded if not passed through the -sp tag
 </p>
 
 #### `-sp` tag
