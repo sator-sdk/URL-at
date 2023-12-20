@@ -47,17 +47,45 @@ Or if preferred the IP could be directly retrieved from DNS records of an existi
 Help menu
 </p>
 
-### Fake slash examples
+### Set the `/` separator to the unicode `2215`
 
 ```shell
-# Fake slashes in the User-Info path
+# unicode 2215 in the User-Info path that will be displayed in URL-Encoded
 python urlat.py -i 192.168.1.119 -s 'totally.legit.domain.tld/api/v1/signin/ident?klmer=G1927123976%3A893513460&redir=https%3A%2F%2Fanother.domain&Loing&dobui=b253cnZqbmRzd3JvdmJ3cm92amJvd3dka2piZHZvZWlqY2V3b2lubm9rbmN3d29u' -f
+```
+<p align="center">
+<img src="/pics/unicode2155.png">
+</p>
+<p align="center">
+unicode 2215 in the User-Info path that will be displayed in URL-Encoded
+</p>
 
-# Unencoded fake slashes in the encodable variable
+```shell
+# Unencoded unicode 2215 in the encodable variable
 python urlat.py -i 192.168.1.119 -s totally.legit.domain.tld -sp '/api/v1/signin/ident?klmer=G1927123976%3A893513460&redir=https%3A%2F%2Fanother.domain&Loing&dobui=b253cnZqbmRzd3JvdmJ3cm92amJvd3dka2piZHZvZWlqY2V3b2lubm9rbmN3d29u' -f
 # Encoded links with unicode char 2215
 python urlat.py -i 192.168.1.119 -s totally.legit.domain.tld -sp '/api/v1/signin/ident?klmer=G1927123976%3A893513460&redir=https%3A%2F%2Fanother.domain&Loing&dobui=b253cnZqbmRzd3JvdmJ3cm92amJvd3dka2piZHZvZWlqY2V3b2lubm9rbmN3d29u' -e -f
 ```
+<p align="center">
+<img src="/pics/userpathunicode.png">
+</p>
+<p align="center">
+unicode 2215 in the User-Info path that will be displayed in URL-Encoded
+</p>
+
+### Add the final redirection path
+
+```shell
+python urlat.py -i 192.168.1.119 -s totally.legit.domain.tld -sp '/api/v1/signin/ident?klmer=G1927123976%3A893513460&redir=https%3A%2F%2Fanother.domain&Loing&dobui=b253cnZqbmRzd3JvdmJ3cm92amJvd3dka2piZHZvZWlqY2V3b2lubm9rbmN3d29u' \
+-e -f -p /api/v1/file.zip
+```
+
+<p align="center">
+<img src="/pics/redirpath.png">
+</p>
+<p align="center">
+Redirection path
+</p>
 
 ### Base64 Example
 
@@ -73,6 +101,13 @@ Also i hardcoded some values that improve the whole mechainism and are needed in
 python urlat.py -i 192.168.1.119 -s totally.legit.domain.tld -sp '/api/v1/signin/ident?klmer=G1927123976%3A893513460&redir=https%3A%2F%2Fanother.domain&Loing&dobui=b253cnZqbmRzd3JvdmJ3cm92amJvd3dka2piZHZvZWlqY2V3b2lubm9rbmN3d29u' -e
 ```
 
+<p align="center">
+<img src="/pics/urlatlinks.png">
+</p>
+<p align="center">
+Base64 encoded links
+</p>
+
 ### Retrieve Domain from DNS records
 
 ```shell
@@ -87,3 +122,9 @@ The format is actually inspired from source code of AgentTesla sample that store
 ```shell
 python urlat.py -i 192.168.1.119 -r
 ```
+<p align="center">
+<img src="/pics/randomlinks.png">
+</p>
+<p align="center">
+Random links
+</p>
