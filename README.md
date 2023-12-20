@@ -2,7 +2,7 @@
 
 Python script that craft links with embedded @ sign for redirection to an obfuscated address
 
-Read the Blog post in oder to give some context.
+Read the Blog [post](https://sator-sdk.github.io/posts/url-at-redir/) in oder to give some context.
 
 ## URL Redirect Schema Abuse: The Stealthy Exploits of the @ Sign
 
